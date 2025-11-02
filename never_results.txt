@@ -1,0 +1,15 @@
+Running benchmark with dataset(nb=100000, nq=500, d=128), M=32, num_threads=5, efSearch=16, efConstruction=40
+add_wall_time_us t=7865171.000 us (± 0.0000)
+add_user_time_us t=32413395.000 us (± 0.0000)
+search_wall_time_us t=19352.000 us (± 0.0000)
+search_user_time_us t=94371.000 us (± 0.0000)
+Running benchmark with dataset(nb=100000, nq=500, d=128), M=32, num_threads=5, efSearch=16, efConstruction=40
+add_wall_time_us t=7727464.000 us (± 0.0000)
+add_user_time_us t=31411169.000 us (± 0.0000)
+search_wall_time_us t=17025.000 us (± 0.0000)
+search_user_time_us t=82323.000 us (± 0.0000)
+Running benchmark with dataset(nb=100000, nq=500, d=128), M=32, num_threads=5, efSearch=16, efConstruction=40
+add_wall_time_us t=7647470.000 us (± 0.0000)
+add_user_time_us t=32407687.000 us (± 0.0000)
+search_wall_time_us t=15558.000 us (± 0.0000)
+search_user_time_us t=75969.000 us (± 0.0000)
