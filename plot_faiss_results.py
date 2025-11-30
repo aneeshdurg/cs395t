@@ -21,7 +21,7 @@ def parse_perf_results(file_path):
     return {'dtlb_misses': 0}
 
 def main():
-    results_dir = 'test_results'
+    results_dir = 'test_results_tcmalloc/faiss'
     settings = ['never', 'madvise', 'always']
     nb_values = [100000, 1000000]
     for nb in nb_values:
