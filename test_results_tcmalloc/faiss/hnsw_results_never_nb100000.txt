@@ -1,6 +1,6 @@
 Running benchmark with dataset(nb=100000, nq=500, d=128), M=32, num_threads=5, efSearch=16, efConstruction=40
-add_wall_time_us t=5340981.000 us (± 0.0000)
-add_user_time_us t=25970713.000 us (± 0.0000)
-search_wall_time_us t=16298.000 us (± 0.0000)
-search_user_time_us t=83092.000 us (± 0.0000)
+add_wall_time_us t=4395172.000 us (± 0.0000)
+add_user_time_us t=21650292.000 us (± 0.0000)
+search_wall_time_us t=10466.000 us (± 0.0000)
+search_user_time_us t=54148.000 us (± 0.0000)
 

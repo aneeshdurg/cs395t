@@ -1,20 +1,20 @@
-# started on Sun Nov 30 08:38:15 2025
+# started on Sun Nov 30 09:11:27 2025
 
 
  Performance counter stats for './setup_diskann.sh bench':
 
-     2,701,870,625      cache-references                                                        (50.01%)
-     2,700,671,230      cache-misses                     #   99.96% of all cache refs           (50.03%)
-    59,410,416,966      dTLB-loads                                                              (50.03%)
-       226,478,987      dTLB-load-misses                 #    0.38% of all dTLB cache accesses  (50.02%)
-           840,386      iTLB-loads                                                              (50.01%)
-         7,539,090      iTLB-load-misses                 #  897.10% of all iTLB cache accesses  (50.00%)
-     1,106,972,284      LLC-loads                                                               (50.00%)
-                 0      LLC-load-misses                                                         (50.00%)
+     2,631,857,796      cache-references                                                        (49.98%)
+     2,634,644,251      cache-misses                     #  100.11% of all cache refs           (50.00%)
+    54,365,011,319      dTLB-loads                                                              (50.03%)
+       197,690,364      dTLB-load-misses                 #    0.36% of all dTLB cache accesses  (50.06%)
+           742,552      iTLB-loads                                                              (50.05%)
+         4,637,989      iTLB-load-misses                 #  624.60% of all iTLB cache accesses  (50.02%)
+     1,066,675,944      LLC-loads                                                               (49.99%)
+                 0      LLC-load-misses                                                         (49.99%)
 
-       7.107466517 seconds time elapsed
+       6.461454898 seconds time elapsed
 
-      99.044621000 seconds user
-       3.685472000 seconds sys
+      94.497128000 seconds user
+       2.960977000 seconds sys
 
 

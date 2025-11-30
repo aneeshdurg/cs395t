@@ -57,30 +57,30 @@ Starting index build with R: 32  Lbuild: 50  alpha: 1.2  #threads: 16
 L2: Using AVX2 distance computation DistanceL2Float
 Using only first 100000 from file.. 
 Starting index build with 100000 points... 
-0% of index build completed.Starting final cleanup..done. Link time: 2.77307s
-Index built with degree: max:32  avg:26.1231  min:4  count(deg<2):0
-Indexing time: 2.8051
+0% of index build completed.Starting final cleanup..done. Link time: 2.89362s
+Index built with degree: max:32  avg:26.1259  min:3  count(deg<2):0
+Indexing time: 2.92784
 Not saving tags as they are not enabled.
-Time taken for save: 0.165516s.
+Time taken for save: 0.265167s.
 Reading (with alignment) bin file data/sift/sift_query.fbin ...Metadata: #pts = 10000, #dims = 128, aligned_dim = 128... allocating aligned memory of 5120000 bytes... done. Copying data to mem_aligned buffer... done.
 Opened: data/sift/sift_query_learn_gt100, size: 8000008, cache_size: 8000008
 Reading truthset file data/sift/sift_query_learn_gt100 ...
 Metadata: #pts = 10000, #dims = 100... 
 L2: Using AVX2 distance computation DistanceL2Float
-Resizing took: 0.00226841s
-From graph header, expected_file_size: 10849252, _max_observed_degree: 32, _start: 29429, file_frozen_pts: 0
-Loading vamana graph data/sift/index_sift_learn_R32_L50_A1.2...done. Index has 100000 nodes and 2612307 out-edges, _start is set to 29429
+Resizing took: 0.00248119s
+From graph header, expected_file_size: 10850368, _max_observed_degree: 32, _start: 29429, file_frozen_pts: 0
+Loading vamana graph data/sift/index_sift_learn_R32_L50_A1.2...done. Index has 100000 nodes and 2612586 out-edges, _start is set to 29429
 Num frozen points:0 _nd: 100000 _start: 29429 size(_location_to_tag): 0 size(_tag_to_location):0 Max points: 100000
 Index loaded
 Using 16 threads to search
   Ls         QPS     Avg dist cmps  Mean Latency (mus)   99.9 Latency   Recall@10
 =================================================================================
-  10   143065.73            346.37              107.32         835.31       95.10
-  20   100772.70            517.61              156.19         370.12       97.66
-  30    75298.32            675.41              209.74         445.14       98.59
-  40    61093.61            823.54              258.99         492.64       99.05
-  50    51604.48            964.19              307.02         559.27       99.32
- 100    30484.73           1588.27              521.30         812.91       99.79
+  10   144200.49            346.79              106.49         899.74       95.05
+  20    98138.51            518.60              160.51         435.46       97.67
+  30    73670.57            676.34              214.45         466.02       98.57
+  40    59631.34            824.43              265.46         542.62       99.05
+  50    51726.77            964.82              306.37         517.39       99.32
+ 100    30864.12           1588.43              514.97         790.82       99.80
 Done searching. Now saving results 
 Writing bin: data/sift/res_10_idx_uint32.bin
 bin: #pts = 10000, #dims = 10, size = 400008B

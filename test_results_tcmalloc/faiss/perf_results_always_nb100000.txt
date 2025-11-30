@@ -1,20 +1,20 @@
-# started on Sun Nov 30 08:43:24 2025
+# started on Sun Nov 30 09:14:08 2025
 
 
  Performance counter stats for 'python faiss/perf_tests/bench_hnsw.py --nb 100000':
 
-     1,545,983,665      cache-references                                                        (50.00%)
-     1,546,267,302      cache-misses                     #  100.02% of all cache refs           (50.02%)
-    14,114,981,510      dTLB-loads                                                              (50.05%)
-         1,207,425      dTLB-load-misses                 #    0.01% of all dTLB cache accesses  (50.05%)
-           478,634      iTLB-loads                                                              (50.07%)
-           429,610      iTLB-load-misses                 #   89.76% of all iTLB cache accesses  (50.02%)
-     1,084,916,057      LLC-loads                                                               (49.97%)
-                 0      LLC-load-misses                                                         (49.99%)
+     1,457,874,657      cache-references                                                        (49.98%)
+     1,458,481,154      cache-misses                     #  100.04% of all cache refs           (50.03%)
+    13,865,778,737      dTLB-loads                                                              (50.06%)
+         1,090,520      dTLB-load-misses                 #    0.01% of all dTLB cache accesses  (50.07%)
+           451,871      iTLB-loads                                                              (50.04%)
+           349,726      iTLB-load-misses                 #   77.40% of all iTLB cache accesses  (50.00%)
+     1,054,334,940      LLC-loads                                                               (49.99%)
+                 0      LLC-load-misses                                                         (49.96%)
 
-       6.203595807 seconds time elapsed
+       5.570233381 seconds time elapsed
 
-      28.939668000 seconds user
-       0.293996000 seconds sys
+      25.510714000 seconds user
+       0.283729000 seconds sys
 
 
