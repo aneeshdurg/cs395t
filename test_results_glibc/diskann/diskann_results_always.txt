@@ -1,0 +1,121 @@
+~/cs395t/DiskANN/build ~/cs395t
+Reading bin file data/sift/sift_query.fbin ...
+#pts in part = 10000, #dims = 128, size = 5120000B
+Finished reading part of the bin file.
+Finished converting part data to float.
+Reading bin file data/sift/sift_learn.fbin ...
+#pts = 100000, #dims = 128
+Number of parts: 1
+Reading bin file data/sift/sift_learn.fbin ...
+#pts in part = 100000, #dims = 128, size = 51200000B
+Finished reading part of the bin file.
+Finished converting part data to float.
+Going to compute 100 NNs for 10000 queries over 100000 points in 128 dimensions using L2 distance fn. 
+Computed distances for queries: [0,512)
+Computed exact k-NN for queries: [0,512)
+Computed distances for queries: [512,1024)
+Computed exact k-NN for queries: [512,1024)
+Computed distances for queries: [1024,1536)
+Computed exact k-NN for queries: [1024,1536)
+Computed distances for queries: [1536,2048)
+Computed exact k-NN for queries: [1536,2048)
+Computed distances for queries: [2048,2560)
+Computed exact k-NN for queries: [2048,2560)
+Computed distances for queries: [2560,3072)
+Computed exact k-NN for queries: [2560,3072)
+Computed distances for queries: [3072,3584)
+Computed exact k-NN for queries: [3072,3584)
+Computed distances for queries: [3584,4096)
+Computed exact k-NN for queries: [3584,4096)
+Computed distances for queries: [4096,4608)
+Computed exact k-NN for queries: [4096,4608)
+Computed distances for queries: [4608,5120)
+Computed exact k-NN for queries: [4608,5120)
+Computed distances for queries: [5120,5632)
+Computed exact k-NN for queries: [5120,5632)
+Computed distances for queries: [5632,6144)
+Computed exact k-NN for queries: [5632,6144)
+Computed distances for queries: [6144,6656)
+Computed exact k-NN for queries: [6144,6656)
+Computed distances for queries: [6656,7168)
+Computed exact k-NN for queries: [6656,7168)
+Computed distances for queries: [7168,7680)
+Computed exact k-NN for queries: [7168,7680)
+Computed distances for queries: [7680,8192)
+Computed exact k-NN for queries: [7680,8192)
+Computed distances for queries: [8192,8704)
+Computed exact k-NN for queries: [8192,8704)
+Computed distances for queries: [8704,9216)
+Computed exact k-NN for queries: [8704,9216)
+Computed distances for queries: [9216,9728)
+Computed exact k-NN for queries: [9216,9728)
+Computed distances for queries: [9728,10000)
+Computed exact k-NN for queries: [9728,10000)
+Saving truthset in one file (npts, dim, npts*dim id-matrix, npts*dim dist-matrix) with npts = 10000, dim = 100, size = 8000008B
+Finished writing truthset
+Starting index build with R: 32  Lbuild: 50  alpha: 1.2  #threads: 16
+L2: Using AVX2 distance computation DistanceL2Float
+Using only first 100000 from file.. 
+Starting index build with 100000 points... 
+0% of index build completed.Starting final cleanup..done. Link time: 2.59286s
+Index built with degree: max:32  avg:26.1407  min:3  count(deg<2):0
+Indexing time: 2.63101
+Not saving tags as they are not enabled.
+Time taken for save: 0.175503s.
+Reading (with alignment) bin file data/sift/sift_query.fbin ...Metadata: #pts = 10000, #dims = 128, aligned_dim = 128... allocating aligned memory of 5120000 bytes... done. Copying data to mem_aligned buffer... done.
+Opened: data/sift/sift_query_learn_gt100, size: 8000008, cache_size: 8000008
+Reading truthset file data/sift/sift_query_learn_gt100 ...
+Metadata: #pts = 10000, #dims = 100... 
+L2: Using AVX2 distance computation DistanceL2Float
+Resizing took: 0.0020492s
+From graph header, expected_file_size: 10856296, _max_observed_degree: 32, _start: 29429, file_frozen_pts: 0
+Loading vamana graph data/sift/index_sift_learn_R32_L50_A1.2...done. Index has 100000 nodes and 2614068 out-edges, _start is set to 29429
+Num frozen points:0 _nd: 100000 _start: 29429 size(_location_to_tag): 0 size(_tag_to_location):0 Max points: 100000
+Index loaded
+Using 16 threads to search
+  Ls         QPS     Avg dist cmps  Mean Latency (mus)   99.9 Latency   Recall@10
+=================================================================================
+  10   156335.18            346.66               98.25         881.42       95.04
+  20   101206.73            518.25              155.47         409.06       97.63
+  30    75099.35            676.05              210.34         444.54       98.57
+  40    60621.70            824.20              261.04         530.30       99.03
+  50    51246.10            964.76              309.20         587.92       99.28
+ 100    30252.29           1588.55              525.06         844.33       99.78
+Done searching. Now saving results 
+Writing bin: data/sift/res_10_idx_uint32.bin
+bin: #pts = 10000, #dims = 10, size = 400008B
+Finished writing bin.
+Writing bin: data/sift/res_10_dists_float.bin
+bin: #pts = 10000, #dims = 10, size = 400008B
+Finished writing bin.
+Writing bin: data/sift/res_20_idx_uint32.bin
+bin: #pts = 10000, #dims = 10, size = 400008B
+Finished writing bin.
+Writing bin: data/sift/res_20_dists_float.bin
+bin: #pts = 10000, #dims = 10, size = 400008B
+Finished writing bin.
+Writing bin: data/sift/res_30_idx_uint32.bin
+bin: #pts = 10000, #dims = 10, size = 400008B
+Finished writing bin.
+Writing bin: data/sift/res_30_dists_float.bin
+bin: #pts = 10000, #dims = 10, size = 400008B
+Finished writing bin.
+Writing bin: data/sift/res_40_idx_uint32.bin
+bin: #pts = 10000, #dims = 10, size = 400008B
+Finished writing bin.
+Writing bin: data/sift/res_40_dists_float.bin
+bin: #pts = 10000, #dims = 10, size = 400008B
+Finished writing bin.
+Writing bin: data/sift/res_50_idx_uint32.bin
+bin: #pts = 10000, #dims = 10, size = 400008B
+Finished writing bin.
+Writing bin: data/sift/res_50_dists_float.bin
+bin: #pts = 10000, #dims = 10, size = 400008B
+Finished writing bin.
+Writing bin: data/sift/res_100_idx_uint32.bin
+bin: #pts = 10000, #dims = 10, size = 400008B
+Finished writing bin.
+Writing bin: data/sift/res_100_dists_float.bin
+bin: #pts = 10000, #dims = 10, size = 400008B
+Finished writing bin.
+~/cs395t

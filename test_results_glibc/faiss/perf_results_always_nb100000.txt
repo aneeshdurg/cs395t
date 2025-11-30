@@ -1,0 +1,20 @@
+# started on Sun Nov 30 08:30:39 2025
+
+
+ Performance counter stats for 'python faiss/perf_tests/bench_hnsw.py --nb 100000':
+
+     1,548,445,611      cache-references                                                        (50.03%)
+     1,550,075,034      cache-misses                     #  100.11% of all cache refs           (49.99%)
+    14,087,814,078      dTLB-loads                                                              (50.03%)
+         1,137,784      dTLB-load-misses                 #    0.01% of all dTLB cache accesses  (50.03%)
+           461,464      iTLB-loads                                                              (50.02%)
+           392,464      iTLB-load-misses                 #   85.05% of all iTLB cache accesses  (50.04%)
+     1,080,878,328      LLC-loads                                                               (50.01%)
+                 0      LLC-load-misses                                                         (50.02%)
+
+       5.779053675 seconds time elapsed
+
+      28.543931000 seconds user
+       0.306923000 seconds sys
+
+

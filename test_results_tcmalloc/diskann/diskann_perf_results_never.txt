@@ -1,0 +1,20 @@
+# started on Sun Nov 30 08:38:06 2025
+
+
+ Performance counter stats for './setup_diskann.sh bench':
+
+     2,643,234,745      cache-references                                                        (50.01%)
+     2,645,924,852      cache-misses                     #  100.10% of all cache refs           (50.01%)
+    57,020,544,298      dTLB-loads                                                              (50.02%)
+       226,046,668      dTLB-load-misses                 #    0.40% of all dTLB cache accesses  (50.02%)
+         1,155,408      iTLB-loads                                                              (50.02%)
+         6,492,232      iTLB-load-misses                 #  561.90% of all iTLB cache accesses  (50.01%)
+     1,089,494,387      LLC-loads                                                               (50.00%)
+                 0      LLC-load-misses                                                         (50.00%)
+
+       6.991662436 seconds time elapsed
+
+      99.406907000 seconds user
+       3.418215000 seconds sys
+
+
