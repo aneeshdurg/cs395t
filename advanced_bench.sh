@@ -52,7 +52,7 @@ fi
 echo ""
 
 # Benchmarking Loop
-RESULTS_DIR="test_results"
+RESULTS_DIR="test_results/faiss"
 NB_VALUES=(100000 1000000)
 
 echo "Starting benchmark runs. This will require sudo to change system settings."

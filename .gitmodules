@@ -1,3 +1,6 @@
 [submodule "faiss"]
 	path = faiss
 	url = https://github.com/facebookresearch/faiss
+[submodule "DiskANN"]
+	path = DiskANN
+	url = https://github.com/microsoft/DiskANN/
