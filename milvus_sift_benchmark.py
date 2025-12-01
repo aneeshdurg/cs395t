@@ -99,7 +99,7 @@ def main():
 
     # print("Inserting vectors in batches …")
 
-    # batch_size = 100
+    # batch_size = 2000
     # num = len(xb)
     # ids = np.arange(num)
 
