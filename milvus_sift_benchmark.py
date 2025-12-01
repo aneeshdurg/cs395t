@@ -83,46 +83,47 @@ def main():
     collection_name = "sift_1m"
 
     print(f"Dropping old collection (if exists): {collection_name}")
-    try:
-        Collection(name=collection_name).drop()
-    except Exception:
-        pass
+    collection = Collection(name=collection_name).drop()
+    # try:
+    #     Collection(name=collection_name).drop()
+    # except Exception:
+    #     pass
 
-    print("Creating collection …")
-    fields = [
-        FieldSchema(name="id", dtype=DataType.INT64, is_primary=True, auto_id=False),
-        FieldSchema(name="vec", dtype=DataType.FLOAT_VECTOR, dim=dim),
-    ]
-    schema = CollectionSchema(fields)
-    collection = Collection(name=collection_name, schema=schema)
+    # print("Creating collection …")
+    # fields = [
+    #     FieldSchema(name="id", dtype=DataType.INT64, is_primary=True, auto_id=False),
+    #     FieldSchema(name="vec", dtype=DataType.FLOAT_VECTOR, dim=dim),
+    # ]
+    # schema = CollectionSchema(fields)
+    # collection = Collection(name=collection_name, schema=schema)
 
-    print("Inserting vectors in batches …")
+    # print("Inserting vectors in batches …")
 
-    batch_size = 100
-    num = len(xb)
-    ids = np.arange(num)
+    # batch_size = 100
+    # num = len(xb)
+    # ids = np.arange(num)
 
-    for start in tqdm(range(0, num, batch_size)):
-        end = min(start + batch_size, num)
+    # for start in tqdm(range(0, num, batch_size)):
+    #     end = min(start + batch_size, num)
 
-        batch_ids = ids[start:end]
-        batch_vecs = xb[start:end].tolist()
+    #     batch_ids = ids[start:end]
+    #     batch_vecs = xb[start:end].tolist()
 
-        collection.insert([batch_ids, batch_vecs])
+    #     collection.insert([batch_ids, batch_vecs])
 
-    collection.flush()
-    print("Insertion complete.")
+    # collection.flush()
+    # print("Insertion complete.")
 
-    # ########################################
-    # # Build index
-    # ########################################
-    print("Creating IVF_FLAT index …")
-    index_params = {
-        "index_type": "IVF_FLAT",
-        "metric_type": "L2",
-        "params": {"nlist": 4096},
-    }
-    collection.create_index(field_name="vec", index_params=index_params)
+    # # ########################################
+    # # # Build index
+    # # ########################################
+    # print("Creating IVF_FLAT index …")
+    # index_params = {
+    #     "index_type": "IVF_FLAT",
+    #     "metric_type": "L2",
+    #     "params": {"nlist": 4096},
+    # }
+    # collection.create_index(field_name="vec", index_params=index_params)
     collection.load()
 
     ########################################
