@@ -14,12 +14,12 @@ CONDA_ENV_NAME="faiss-bench"
 if ! command -v conda &>/dev/null; then
   echo "Conda not found in PATH. Attempting to initialize it..."
   # HARDCODED
-  CONDA_SCRIPT="/users/$USER/miniconda3/etc/profile.d/conda.sh"
+  CONDA_SCRIPT="/users/$USER/miniforge3/etc/profile.d/conda.sh"
   if [ -f "$CONDA_SCRIPT" ]; then
     source "$CONDA_SCRIPT"
   else
     echo "Error: Could not find conda initialization script at $CONDA_SCRIPT."
-    echo "Please ensure Miniforge3 is installed at /users/$USER/miniconda3 or update the script with the correct path."
+    echo "Please ensure Miniforge3 is installed at /users/$USER/miniforge3 or update the script with the correct path."
     exit 1
   fi
   # Re-check for conda after attempting to initialize it.
@@ -86,7 +86,7 @@ for nb in "${NB_VALUES[@]}"; do
 
     # Activate conda environment and run the benchmark under 'perf stat'
     conda run -n "$CONDA_ENV_NAME" perf stat \
-      -e "cache-references,cache-misses,dTLB-loads,dTLB-load-misses,iTLB-loads,iTLB-load-misses,LLC-loads,LLC-load-misses" \
+      -e "page-faults,cache-references,cache-misses,dTLB-loads,dTLB-load-misses,iTLB-loads,iTLB-load-misses,LLC-loads,LLC-load-misses" \
       -o "$PERF_OUTPUT" \
       -- \
       python faiss/perf_tests/bench_hnsw.py --nb "$nb" >"$BENCH_OUTPUT"

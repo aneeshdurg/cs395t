@@ -41,7 +41,7 @@ for setting in always never madvise; do
 
   # Activate conda environment and run the benchmark under 'perf stat'
   perf stat \
-    -e "cache-references,cache-misses,dTLB-loads,dTLB-load-misses,iTLB-loads,iTLB-load-misses,LLC-loads,LLC-load-misses" \
+    -e "page-faults,cache-references,cache-misses,dTLB-loads,dTLB-load-misses,iTLB-loads,iTLB-load-misses,LLC-loads,LLC-load-misses" \
     -o "$PERF_OUTPUT" \
     -- \
     ./setup_diskann.sh bench >"$BENCH_OUTPUT"

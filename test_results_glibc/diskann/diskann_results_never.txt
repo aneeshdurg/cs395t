@@ -1,8 +1,58 @@
+~/cs395t/DiskANN/build ~/cs395t
+Reading (with alignment) bin file data/sift/sift_query.fbin ...Metadata: #pts = 10000, #dims = 128, aligned_dim = 128... allocating aligned memory of 5120000 bytes... done. Copying data to mem_aligned buffer... done.
+Opened: data/sift/sift_query_learn_gt100, size: 8000008, cache_size: 8000008
+Reading truthset file data/sift/sift_query_learn_gt100 ...
+Metadata: #pts = 10000, #dims = 100... 
+L2: Using AVX2 distance computation DistanceL2Float
+Resizing took: 0.00631991s
+From graph header, expected_file_size: 10848572, _max_observed_degree: 32, _start: 29429, file_frozen_pts: 0
+Loading vamana graph data/sift/index_sift_learn_R32_L50_A1.2...done. Index has 100000 nodes and 2612137 out-edges, _start is set to 29429
+Num frozen points:0 _nd: 100000 _start: 29429 size(_location_to_tag): 0 size(_tag_to_location):0 Max points: 100000
+Index loaded
+Using 32 threads to search
   Ls         QPS     Avg dist cmps  Mean Latency (mus)   99.9 Latency   Recall@10
 =================================================================================
-  10   142302.97            345.30              107.25        1038.97       95.11
-  20    91894.52            516.59              171.06         360.54       97.63
-  30    68021.26            674.31              231.97         449.60       98.58
-  40    55708.37            822.35              283.92         518.60       99.06
-  50    47191.68            962.87              335.50         519.16       99.30
- 100    28375.91           1586.57              559.86         881.95       99.81
+  10   210792.83            346.36              133.91        5811.59       95.06
+  20   217894.48            517.51              144.35         280.30       97.63
+  30   170613.87            675.40              184.96         319.87       98.57
+  40   139171.01            823.45              227.25         385.34       99.05
+  50   117810.01            963.94              268.91         444.44       99.31
+ 100    68692.01           1587.66              462.23         761.40       99.79
+Done searching. Now saving results 
+Writing bin: data/sift/res_10_idx_uint32.bin
+bin: #pts = 10000, #dims = 10, size = 400008B
+Finished writing bin.
+Writing bin: data/sift/res_10_dists_float.bin
+bin: #pts = 10000, #dims = 10, size = 400008B
+Finished writing bin.
+Writing bin: data/sift/res_20_idx_uint32.bin
+bin: #pts = 10000, #dims = 10, size = 400008B
+Finished writing bin.
+Writing bin: data/sift/res_20_dists_float.bin
+bin: #pts = 10000, #dims = 10, size = 400008B
+Finished writing bin.
+Writing bin: data/sift/res_30_idx_uint32.bin
+bin: #pts = 10000, #dims = 10, size = 400008B
+Finished writing bin.
+Writing bin: data/sift/res_30_dists_float.bin
+bin: #pts = 10000, #dims = 10, size = 400008B
+Finished writing bin.
+Writing bin: data/sift/res_40_idx_uint32.bin
+bin: #pts = 10000, #dims = 10, size = 400008B
+Finished writing bin.
+Writing bin: data/sift/res_40_dists_float.bin
+bin: #pts = 10000, #dims = 10, size = 400008B
+Finished writing bin.
+Writing bin: data/sift/res_50_idx_uint32.bin
+bin: #pts = 10000, #dims = 10, size = 400008B
+Finished writing bin.
+Writing bin: data/sift/res_50_dists_float.bin
+bin: #pts = 10000, #dims = 10, size = 400008B
+Finished writing bin.
+Writing bin: data/sift/res_100_idx_uint32.bin
+bin: #pts = 10000, #dims = 10, size = 400008B
+Finished writing bin.
+Writing bin: data/sift/res_100_dists_float.bin
+bin: #pts = 10000, #dims = 10, size = 400008B
+Finished writing bin.
+~/cs395t

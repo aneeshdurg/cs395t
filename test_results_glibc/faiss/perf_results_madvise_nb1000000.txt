@@ -1,20 +1,21 @@
-# started on Sun Nov 30 08:33:36 2025
+# started on Mon Dec  1 15:05:07 2025
 
 
  Performance counter stats for 'python faiss/perf_tests/bench_hnsw.py --nb 1000000':
 
-    16,433,488,621      cache-references                                                        (50.00%)
-    16,433,734,660      cache-misses                     #  100.00% of all cache refs           (50.00%)
-   101,799,527,236      dTLB-loads                                                              (50.00%)
-     2,086,205,535      dTLB-load-misses                 #    2.05% of all dTLB cache accesses  (50.00%)
-         1,387,919      iTLB-loads                                                              (50.00%)
-         4,196,582      iTLB-load-misses                 #  302.37% of all iTLB cache accesses  (50.00%)
-    11,127,071,745      LLC-loads                                                               (50.00%)
-                 0      LLC-load-misses                                                         (50.00%)
+           896,246      page-faults                                                           
+    16,523,195,829      cache-references                                                        (49.95%)
+    10,603,970,004      cache-misses                     #   64.18% of all cache refs           (49.92%)
+   112,328,757,504      dTLB-loads                                                              (49.48%)
+     2,394,545,929      dTLB-load-misses                 #    2.13% of all dTLB cache accesses  (25.18%)
+         1,704,413      iTLB-loads                                                              (25.05%)
+        14,339,246      iTLB-load-misses                 #  841.30% of all iTLB cache accesses  (37.39%)
+    16,247,446,204      LLC-loads                                                               (49.81%)
+    10,578,660,441      LLC-load-misses                  #   65.11% of all LL-cache accesses    (49.90%)
 
-      68.125403115 seconds time elapsed
+      68.552902965 seconds time elapsed
 
-     319.527880000 seconds user
-       1.234937000 seconds sys
+     294.142965000 seconds user
+       3.693263000 seconds sys
 
 
