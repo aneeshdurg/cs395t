@@ -1,0 +1,21 @@
+# started on Mon Dec  1 17:42:46 2025
+
+
+ Performance counter stats for 'python -u milvus_sift_benchmark.py':
+
+           297,924      page-faults                                                           
+    27,100,697,074      cache-references                                                        (44.05%)
+    10,725,814,350      cache-misses                     #   39.58% of all cache refs           (45.31%)
+   184,451,999,324      dTLB-loads                                                              (32.74%)
+        92,037,273      dTLB-load-misses                 #    0.05% of all dTLB cache accesses  (28.57%)
+       240,576,597      iTLB-loads                                                              (26.35%)
+       286,062,845      iTLB-load-misses                 #  118.91% of all iTLB cache accesses  (35.19%)
+    22,122,075,744      LLC-loads                                                               (45.89%)
+    10,614,340,602      LLC-load-misses                  #   47.98% of all LL-cache accesses    (44.38%)
+
+     111.837498426 seconds time elapsed
+
+     994.421892000 seconds user
+      18.065698000 seconds sys
+
+
