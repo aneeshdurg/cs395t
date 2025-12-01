@@ -84,7 +84,6 @@ def main(reset: bool):
 
     collection_name = "sift_1m"
 
-    collection = Collection(name=collection_name)
     if reset:
         print(f"Dropping old collection (if exists): {collection_name}")
         try:
@@ -129,9 +128,11 @@ def main(reset: bool):
             "params": {"nlist": 4096},
         }
         collection.create_index(field_name="vec", index_params=index_params)
+        collection.load()
     else:
         print("Loading from disk!")
-    collection.load()
+        collection = Collection(name=collection_name)
+        collection.load()
 
     ########################################
     # Benchmark
