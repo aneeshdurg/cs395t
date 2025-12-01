@@ -129,6 +129,8 @@ def main(reset: bool):
             "params": {"nlist": 4096},
         }
         collection.create_index(field_name="vec", index_params=index_params)
+    else:
+        print("Loading from disk!")
     collection.load()
 
     ########################################
@@ -150,5 +152,6 @@ def main(reset: bool):
 if __name__ == "__main__":
     reset = False
     if "--reset" in sys.argv:
+        print("resetting!")
         reset = True
     main(reset)
