@@ -1,15 +1,13 @@
 #!/usr/bin/env python3
 import numpy as np
 import time
-from pymilvus import (
-    connections, FieldSchema, CollectionSchema,
-    DataType, Collection
-)
+from pymilvus import connections, FieldSchema, CollectionSchema, DataType, Collection
 from tqdm import tqdm
 
 ########################################
 # Helpers: read fvecs/ivecs
 ########################################
+
 
 def read_fvecs(path):
     data = np.fromfile(path, dtype=np.int32)
@@ -17,15 +15,18 @@ def read_fvecs(path):
     data = data.reshape(-1, dim + 1)
     return data[:, 1:].astype("float32")
 
+
 def read_ivecs(path):
     data = np.fromfile(path, dtype=np.int32)
     dim = data[0]
     data = data.reshape(-1, dim + 1)
     return data[:, 1:]
 
+
 ########################################
 # Benchmark helpers
 ########################################
+
 
 def run_search(collection, queries, k, nprobe):
     search_params = {
@@ -44,6 +45,7 @@ def run_search(collection, queries, k, nprobe):
     ids = [res.ids for res in results]
     return np.array(ids), latency
 
+
 def compute_recall(retrieved, groundtruth, k):
     correct = 0
     nq = len(retrieved)
@@ -51,15 +53,17 @@ def compute_recall(retrieved, groundtruth, k):
         correct += len(set(retrieved[i][:k]) & set(groundtruth[i][:k]))
     return correct / (nq * k)
 
+
 ########################################
 # Main
 ########################################
 
+
 def main():
     # Paths (modify if needed)
-    base_path = "sift/sift_base.fvecs"
-    query_path = "sift/sift_query.fvecs"
-    gt_path = "sift/sift_groundtruth.ivecs"
+    base_path = "DiskANN/build/data/sift/sift_base.fvecs"
+    query_path = "DiskANN/build/data/sift/sift_query.fvecs"
+    gt_path = "DiskANN/build/data/sift/sift_groundtruth.ivecs"
 
     print("Loading SIFT dataset …")
     xb = read_fvecs(base_path)
@@ -136,6 +140,6 @@ def main():
 
     print("\nBenchmark complete!")
 
+
 if __name__ == "__main__":
     main()
-
