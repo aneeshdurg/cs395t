@@ -84,7 +84,7 @@ for setting in always never madvise; do
     -e "page-faults,cache-references,cache-misses,dTLB-loads,dTLB-load-misses,iTLB-loads,iTLB-load-misses,LLC-loads,LLC-load-misses" \
     -o "$PERF_OUTPUT" \
     -- \
-    python milvus_sift_benchmark.py >"$BENCH_OUTPUT"
+    python milvus_sift_benchmark.py | tee "$BENCH_OUTPUT"
 
   echo ""
   echo "--- Finished run for '$setting' ---"
